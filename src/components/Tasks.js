@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 // Task lists
-const Tasks = ({ tasks }) => {
+const Tasks = ({ tasks, onDelete }) => {
   return (
     // to add a new object
     // setTasks([...tasks, new objext ])
@@ -9,7 +9,7 @@ const Tasks = ({ tasks }) => {
     //  create a list with map
     <>
       {tasks.map((task) => (
-        <Task key={task.id} task={task} />
+        <Task key={task.id} task={task} onDelete={onDelete} />
       ))}
     </>
   );
